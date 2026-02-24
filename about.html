@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pothos Nursery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#7C9A82',
+                        sageLight: '#A8B5A0',
+                        taupe: '#B8A394',
+                        sand: '#D4C4A8',
+                        cream: '#F5F2EB',
+                        offwhite: '#FDFCFA',
+                        beige: '#E8E4DC',
+                        charcoal: '#3D3D3D',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+    </style>
+</head>
+<body class="bg-cream text-charcoal">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-offwhite/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="text-3xl">🪴</span>
+                <span class="font-heading text-2xl font-semibold text-sage">Pothos</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="hover:text-sage transition">Home</a>
+                <a href="about.html" class="hover:text-sage transition">About</a>
+                <a href="pricing.html" class="hover:text-sage transition">Pricing</a>
+                <a href="faq.html" class="hover:text-sage transition">FAQ</a>
+                <a href="contact.html" class="bg-sage text-white px-5 py-2 rounded-full hover:bg-sageLight transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-offwhite px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-sage">Home</a>
+            <a href="about.html" class="block py-2 hover:text-sage">About</a>
+            <a href="pricing.html" class="block py-2 hover:text-sage">Pricing</a>
+            <a href="faq.html" class="block py-2 hover:text-sage">FAQ</a>
+            <a href="contact.html" class="block py-2 text-sage">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative pt-28 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-heading font-bold text-sage mb-6">Our Story</h1>
+            <p class="text-xl text-charcoal/70 max-w-2xl">Nurturing plants and people since 2015</p>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-heading font-semibold text-sage mb-6">Growing from Love</h2>
+                <p class="text-charcoal/80 mb-4 leading-relaxed">
+                    Pothos Nursery began as a small passion project in our backyard greenhouse. What started as a love for nurturing tiny seedlings has blossomed into a beloved community destination for plant enthusiasts of all levels.
+                </p>
+                <p class="text-charcoal/80 mb-4 leading-relaxed">
+                    We believe every space deserves a touch of green, and every person deserves a plant that thrives in their care. That's why we carefully curate our collection to ensure each plant is healthy, vibrant, and suited to your unique environment.
+                </p>
+                <p class="text-charcoal/80 leading-relaxed">
+                    Today, our nursery spans 5,000 square feet of greenhouse space and serves thousands of happy plant parents across the region.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Nursery greenhouse" class="rounded-2xl shadow-lg">
+                <div class="absolute -bottom-6 -left-6 bg-sage text-offwhite px-6 py-4 rounded-xl">
+                    <p class="font-heading text-2xl font-bold">10+</p>
+                    <p class="text-sm">Years Growing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 px-6 bg-sageLight/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-semibold text-sage mb-4">Our Values</h2>
+                <p class="text-charcoal/70 max-w-xl mx-auto">The principles that guide everything we do</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-offwhite rounded-2xl p-8 text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">🌱</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Quality First</h3>
+                    <p class="text-charcoal/70">Every plant is hand-selected and nurtured with care. We never compromise on the health of our plants.</p>
+                </div>
+                <div class="bg-offwhite rounded-2xl p-8 text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">💚</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Community Focus</h3>
+                    <p class="text-charcoal/70">We're more than a nursery – we're a community of plant lovers supporting each other's green journeys.</p>
+                </div>
+                <div class="bg-offwhite rounded-2xl p-8 text-center hover:shadow-lg transition">
+                    <div class="text-5xl mb-4">♻️</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Sustainability</h3>
+                    <p class="text-charcoal/70">We practice eco-friendly growing methods and encourage sustainable plant care practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-semibold text-sage mb-4">Our Space</h2>
+                <p class="text-charcoal/70">A glimpse into our green haven</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=400&q=80" alt="Plants" class="rounded-xl hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=80" alt="Nursery" class="rounded-xl hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=400&q=80" alt="Indoor plants" class="rounded-xl hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=400&q=80" alt="Succulents" class="rounded-xl hover:opacity-90 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-sage">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-heading font-semibold text-offwhite mb-4">Visit Us Today</h2>
+            <p class="text-offwhite/90 mb-8 text-lg">Experience our nursery in person and find your perfect plant</p>
+            <a href="contact.html" class="inline-block bg-taupe text-white px-10 py-4 rounded-full text-lg hover:bg-sand hover:text-charcoal transition font-medium">
+                Get Directions
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="text-2xl">🪴</span>
+                    <span class="font-heading text-xl font-semibold">Pothos</span>
+                </div>
+                <p class="text-offwhite/70">Your local nursery bringing nature home since 2015.</p>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-sage transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-sage transition">About Us</a></li>
+                    <li><a href="pricing.html" class="hover:text-sage transition">Plants & Pricing</a></li>
+                    <li><a href="faq.html" class="hover:text-sage transition">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>123 Garden Lane</li>
+                    <li>Plantville, CA 90210</li>
+                    <li>(555) 123-4567</li>
+                    <li>hello@pothosnursery.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Hours</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>Mon - Fri: 9am - 6pm</li>
+                    <li>Saturday: 9am - 5pm</li>
+                    <li>Sunday: 10am - 4pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-offwhite/20 text-center text-offwhite/50">
+            <p>&copy; 2025 Pothos Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

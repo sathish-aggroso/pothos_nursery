@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Pothos Nursery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#7C9A82',
+                        sageLight: '#A8B5A0',
+                        taupe: '#B8A394',
+                        sand: '#D4C4A8',
+                        cream: '#F5F2EB',
+                        offwhite: '#FDFCFA',
+                        beige: '#E8E4DC',
+                        charcoal: '#3D3D3D',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-offwhite/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="text-3xl">🪴</span>
+                <span class="font-heading text-2xl font-semibold text-sage">Pothos</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="hover:text-sage transition">Home</a>
+                <a href="about.html" class="hover:text-sage transition">About</a>
+                <a href="pricing.html" class="hover:text-sage transition">Pricing</a>
+                <a href="faq.html" class="hover:text-sage transition">FAQ</a>
+                <a href="contact.html" class="bg-sage text-white px-5 py-2 rounded-full hover:bg-sageLight transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-offwhite px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-sage">Home</a>
+            <a href="about.html" class="block py-2 hover:text-sage">About</a>
+            <a href="pricing.html" class="block py-2 hover:text-sage">Pricing</a>
+            <a href="faq.html" class="block py-2 hover:text-sage">FAQ</a>
+            <a href="contact.html" class="block py-2 text-sage">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-heading font-bold text-sage mb-4">Frequently Asked Questions</h1>
+            <p class="text-xl text-charcoal/70">Everything you need to know about our plants and services</p>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-16 px-6">
+        <div class="max-w-3xl mx-auto space-y-4">
+            <!-- Question 1 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">How do I know which plant is right for my space?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-1">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Consider factors like light availability (low, medium, or bright), your schedule (how often you can water), and the size of your space. Our team is happy to help you find the perfect match – just reach out or visit us!</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">How often should I water my plants?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-2">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">It depends on the plant type, season, and your home's humidity. Most indoor plants prefer to dry out slightly between waterings. Check the soil moisture with your finger – if the top inch is dry, it's time to water. We provide care guides with each plant!</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">Do you offer delivery?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-3">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Yes! We offer free local delivery for orders over $50 within the metropolitan area. For orders under $50, there's a flat $10 delivery fee. We also offer priority delivery for our Estate package customers.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">What is your plant guarantee?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-4">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">We stand behind the health of our plants! Our Starter package includes a 30-day guarantee, Garden Pro has 60 days, and Estate packages include a 90-day guarantee. If your plant struggles within the guarantee period, we'll help you troubleshoot or replace it.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">Can I visit the nursery in person?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-5">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Absolutely! We're open Monday through Friday 9am-6pm, Saturday 9am-5pm, and Sunday 10am-4pm. Come explore our greenhouse, get personalized recommendations, and find your new favorite plant!</p>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">What if my plant arrives damaged?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-6">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">We carefully package all plants for delivery. If anything arrives damaged, please contact us within 48 hours with photos and we'll arrange a replacement or refund immediately.</p>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">Do you offer plant care consultations?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-7">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Yes! Our Garden Pro and Estate packages include consultation sessions. We also offer standalone consultations for $50/hour where we can help troubleshoot problems, create care schedules, or advise on plant placement.</p>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">Are your plants pet-safe?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-8">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Some of our plants are toxic to pets if ingested. We label all plants with pet safety information. If you have pets, ask us about pet-safe alternatives like spider plants, Boston ferns, or prayer plants!</p>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">Do you repot plants for customers?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-9">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">Yes! We offer repotting services starting at $15 depending on pot size. We can repot plants you purchase from us or ones you bring in. We also sell a variety of pots and premium potting soil.</p>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="bg-offwhite rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-5 text-left flex justify-between items-center" onclick="toggleAccordion(this)">
+                    <span class="font-heading text-lg font-semibold text-charcoal">What payment methods do you accept?</span>
+                    <span class="text-sage text-2xl transition-transform" id="icon-10">+</span>
+                </button>
+                <div class="accordion-content px-6 pb-0">
+                    <p class="text-charcoal/70 pb-5">We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and cash for in-store purchases. For larger orders, we also offer payment plans through Affirm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="py-20 px-6 bg-sage">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-heading font-semibold text-offwhite mb-4">Still Have Questions?</h2>
+            <p class="text-offwhite/90 mb-8 text-lg">We're here to help! Reach out and we'll get back to you within 24 hours.</p>
+            <a href="contact.html" class="inline-block bg-taupe text-white px-10 py-4 rounded-full text-lg hover:bg-sand hover:text-charcoal transition font-medium">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="text-2xl">🪴</span>
+                    <span class="font-heading text-xl font-semibold">Pothos</span>
+                </div>
+                <p class="text-offwhite/70">Your local nursery bringing nature home since 2015.</p>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-sage transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-sage transition">About Us</a></li>
+                    <li><a href="pricing.html" class="hover:text-sage transition">Plants & Pricing</a></li>
+                    <li><a href="faq.html" class="hover:text-sage transition">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>123 Garden Lane</li>
+                    <li>Plantville, CA 90210</li>
+                    <li>(555) 123-4567</li>
+                    <li>hello@pothosnursery.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Hours</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>Mon - Fri: 9am - 6pm</li>
+                    <li>Saturday: 9am - 5pm</li>
+                    <li>Sunday: 10am - 4pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-offwhite/20 text-center text-offwhite/50">
+            <p>&copy; 2025 Pothos Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+            
+            content.classList.toggle('open');
+            icon.textContent = content.classList.contains('open') ? '−' : '+';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pothos Nursery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#7C9A82',
+                        sageLight: '#A8B5A0',
+                        taupe: '#B8A394',
+                        sand: '#D4C4A8',
+                        cream: '#F5F2EB',
+                        offwhite: '#FDFCFA',
+                        beige: '#E8E4DC',
+                        charcoal: '#3D3D3D',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+    </style>
+</head>
+<body class="bg-cream text-charcoal">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-offwhite/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="text-3xl">🪴</span>
+                <span class="font-heading text-2xl font-semibold text-sage">Pothos</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="hover:text-sage transition">Home</a>
+                <a href="about.html" class="hover:text-sage transition">About</a>
+                <a href="pricing.html" class="hover:text-sage transition">Pricing</a>
+                <a href="faq.html" class="hover:text-sage transition">FAQ</a>
+                <a href="contact.html" class="bg-sage text-white px-5 py-2 rounded-full hover:bg-sageLight transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-offwhite px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-sage">Home</a>
+            <a href="about.html" class="block py-2 hover:text-sage">About</a>
+            <a href="pricing.html" class="block py-2 hover:text-sage">Pricing</a>
+            <a href="faq.html" class="block py-2 hover:text-sage">FAQ</a>
+            <a href="contact.html" class="block py-2 text-sage">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-heading font-bold text-sage mb-4">Get in Touch</h1>
+            <p class="text-xl text-charcoal/70">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-offwhite rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-heading font-semibold text-sage mb-6">Send Us a Message</h2>
+                <form class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-charcoal/70 mb-2">Your Name</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-beige focus:border-sage focus:outline-none transition bg-cream" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-charcoal/70 mb-2">Email Address</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-beige focus:border-sage focus:outline-none transition bg-cream" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-charcoal/70 mb-2">Phone Number</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-beige focus:border-sage focus:outline-none transition bg-cream" placeholder="(555) 123-4567">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-charcoal/70 mb-2">Message</label>
+                        <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-beige focus:border-sage focus:outline-none transition bg-cream" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-sage text-white py-4 rounded-lg font-medium hover:bg-sageLight transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-6">
+                <!-- Address -->
+                <div class="bg-offwhite rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">📍</div>
+                        <div>
+                            <h3 class="font-heading text-xl font-semibold mb-2">Visit Us</h3>
+                            <p class="text-charcoal/70">
+                                123 Garden Lane<br>
+                                Plantville, CA 90210
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-offwhite rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">📞</div>
+                        <div>
+                            <h3 class="font-heading text-xl font-semibold mb-2">Call Us</h3>
+                            <p class="text-charcoal/70">
+                                (555) 123-4567<br>
+                                Mon - Fri: 9am - 6pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-offwhite rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">✉️</div>
+                        <div>
+                            <h3 class="font-heading text-xl font-semibold mb-2">Email Us</h3>
+                            <p class="text-charcoal/70">
+                                hello@pothosnursery.com<br>
+                                We reply within 24 hours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-offwhite rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">🕐</div>
+                        <div>
+                            <h3 class="font-heading text-xl font-semibold mb-2">Hours</h3>
+                            <p class="text-charcoal/70">
+                                Monday - Friday: 9am - 6pm<br>
+                                Saturday: 9am - 5pm<br>
+                                Sunday: 10am - 4pm
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section class="py-16 px-6 bg-sageLight/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-offwhite rounded-2xl overflow-hidden shadow-sm">
+                <div class="h-80 bg-beige flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">🗺️</div>
+                        <p class="text-charcoal/70">Map placeholder</p>
+                        <p class="text-charcoal/50 text-sm">123 Garden Lane, Plantville, CA 90210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Teaser -->
+    <section class="py-16 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-sage mb-4">Have a Quick Question?</h2>
+            <p class="text-charcoal/70 mb-6">Check out our FAQ page for answers to common questions about plant care, delivery, and more.</p>
+            <a href="faq.html" class="inline-block bg-sage text-white px-8 py-3 rounded-full hover:bg-sageLight transition font-medium">
+                View FAQ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="text-2xl">🪴</span>
+                    <span class="font-heading text-xl font-semibold">Pothos</span>
+                </div>
+                <p class="text-offwhite/70">Your local nursery bringing nature home since 2015.</p>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-sage transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-sage transition">About Us</a></li>
+                    <li><a href="pricing.html" class="hover:text-sage transition">Plants & Pricing</a></li>
+                    <li><a href="faq.html" class="hover:text-sage transition">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>123 Garden Lane</li>
+                    <li>Plantville, CA 90210</li>
+                    <li>(555) 123-4567</li>
+                    <li>hello@pothosnursery.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Hours</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>Mon - Fri: 9am - 6pm</li>
+                    <li>Saturday: 9am - 5pm</li>
+                    <li>Sunday: 10am - 4pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-offwhite/20 text-center text-offwhite/50">
+            <p>&copy; 2025 Pothos Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

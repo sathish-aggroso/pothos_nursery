@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothos Nursery - Your Local Plant Paradise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#7C9A82',
+                        sageLight: '#A8B5A0',
+                        taupe: '#B8A394',
+                        sand: '#D4C4A8',
+                        cream: '#F5F2EB',
+                        offwhite: '#FDFCFA',
+                        beige: '#E8E4DC',
+                        charcoal: '#3D3D3D',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-charcoal">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-offwhite/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="text-3xl">🪴</span>
+                <span class="font-heading text-2xl font-semibold text-sage">Pothos</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="hover:text-sage transition">Home</a>
+                <a href="about.html" class="hover:text-sage transition">About</a>
+                <a href="pricing.html" class="hover:text-sage transition">Pricing</a>
+                <a href="faq.html" class="hover:text-sage transition">FAQ</a>
+                <a href="contact.html" class="bg-sage text-white px-5 py-2 rounded-full hover:bg-sageLight transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-offwhite px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-sage">Home</a>
+            <a href="about.html" class="block py-2 hover:text-sage">About</a>
+            <a href="pricing.html" class="block py-2 hover:text-sage">Pricing</a>
+            <a href="faq.html" class="block py-2 hover:text-sage">FAQ</a>
+            <a href="contact.html" class="block py-2 text-sage">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-[80vh] flex items-center pt-20">
+        <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=1920&q=80" alt="Indoor plants" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-sage/70"></div>
+        <div class="relative max-w-6xl mx-auto px-6 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-heading font-bold text-offwhite mb-6 leading-tight">
+                    Bring Nature<br>Into Your Home
+                </h1>
+                <p class="text-xl text-offwhite/90 mb-8 leading-relaxed">
+                    Discover our curated collection of beautiful indoor plants, handpicked to transform your space into a thriving green sanctuary.
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="pricing.html" class="bg-taupe text-white px-8 py-3 rounded-full text-lg hover:bg-sand hover:text-charcoal transition font-medium">
+                        Browse Plants
+                    </a>
+                    <a href="about.html" class="border-2 border-offwhite text-offwhite px-8 py-3 rounded-full text-lg hover:bg-offwhite hover:text-sage transition font-medium">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Plants -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-semibold text-sage mb-4">Customer Favorites</h2>
+                <p class="text-charcoal/70 max-w-xl mx-auto">Our most loved plants that bring life and beauty to any room</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80" alt="Monstera" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-semibold mb-2">Monstera Deliciosa</h3>
+                        <p class="text-charcoal/70 text-sm mb-3">The iconic Swiss Cheese Plant with stunning split leaves</p>
+                        <span class="text-sage font-semibold text-lg">$45</span>
+                    </div>
+                </div>
+                <div class="bg-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&q=80" alt="Fiddle Leaf Fig" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-semibold mb-2">Fiddle Leaf Fig</h3>
+                        <p class="text-charcoal/70 text-sm mb-3">A statement piece with large, violin-shaped leaves</p>
+                        <span class="text-sage font-semibold text-lg">$85</span>
+                    </div>
+                </div>
+                <div class="bg-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?w=600&q=80" alt="Snake Plant" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-semibold mb-2">Snake Plant</h3>
+                        <p class="text-charcoal/70 text-sm mb-3">Nearly indestructible with beautiful upright foliage</p>
+                        <span class="text-sage font-semibold text-lg">$25</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pricing.html" class="inline-flex items-center gap-2 text-sage font-medium hover:gap-3 transition">
+                    View all 10 plants <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-20 px-6 bg-sageLight/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-semibold text-sage mb-4">What We Offer</h2>
+                <p class="text-charcoal/70 max-w-xl mx-auto">Everything you need to start and maintain your indoor jungle</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-offwhite rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">🪴</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Curated Plant Selection</h3>
+                    <p class="text-charcoal/70">Hand-picked, healthy plants suited for your specific environment and lifestyle</p>
+                </div>
+                <div class="bg-offwhite rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">💡</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Care Guidance</h3>
+                    <p class="text-charcoal/70">Expert advice on plant care, watering schedules, and optimal placement</p>
+                </div>
+                <div class="bg-offwhite rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-4">🚚</div>
+                    <h3 class="text-xl font-heading font-semibold mb-3">Local Delivery</h3>
+                    <p class="text-charcoal/70">Free local delivery for orders over $50 within the metropolitan area</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-taupe/20 rounded-3xl p-10">
+                <p class="text-2xl md:text-3xl font-heading italic text-charcoal mb-6">
+                    "Pothos Nursery transformed my apartment into a peaceful oasis. The staff helped me choose perfect low-maintenance plants that thrive despite my busy schedule!"
+                </p>
+                <p class="text-sage font-medium">— Sarah M., Happy Plant Parent</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-sage">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-heading font-semibold text-offwhite mb-4">Ready to Start Your Green Journey?</h2>
+            <p class="text-offwhite/90 mb-8 text-lg">Visit us today or reach out to find the perfect plants for your space</p>
+            <a href="contact.html" class="inline-block bg-taupe text-white px-10 py-4 rounded-full text-lg hover:bg-sand hover:text-charcoal transition font-medium">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="text-2xl">🪴</span>
+                    <span class="font-heading text-xl font-semibold">Pothos</span>
+                </div>
+                <p class="text-offwhite/70">Your local nursery bringing nature home since 2015.</p>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-sage transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-sage transition">About Us</a></li>
+                    <li><a href="pricing.html" class="hover:text-sage transition">Plants & Pricing</a></li>
+                    <li><a href="faq.html" class="hover:text-sage transition">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>123 Garden Lane</li>
+                    <li>Plantville, CA 90210</li>
+                    <li>(555) 123-4567</li>
+                    <li>hello@pothosnursery.com</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Hours</h4>
+                <ul class="space-y-2 text-offwhite/70">
+                    <li>Mon - Fri: 9am - 6pm</li>
+                    <li>Saturday: 9am - 5pm</li>
+                    <li>Sunday: 10am - 4pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-offwhite/20 text-center text-offwhite/50">
+            <p>&copy; 2025 Pothos Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
